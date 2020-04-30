@@ -7,10 +7,12 @@
     <p>Tag: {{upload.tag}}</p>
     <p>Date created: {{upload.createdAt}}</p>
     <p>date modified: {{upload.updatedAt}}</p>
+    {{#if upload.isOwner}}
     <div class="image-buttons row">
     <button data-id="{{upload._id}}" class="btn btn-warning update-btn" type="button" value="Update">Update</button>
     <button data-id="{{upload._id}}" class="btn btn-danger delete-btn" type="button" value="Delete">Delete</button>
     </div>
+    {{/if}}
   </div>
 {{/each}}
 </div>

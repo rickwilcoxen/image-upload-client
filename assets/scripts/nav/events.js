@@ -1,7 +1,6 @@
 'use strict'
 
 const onSignIn = function () {
-  console.log('In Nav Events')
   $('.sign-in, .Auth').show()
   $('.sign-up').hide()
 }

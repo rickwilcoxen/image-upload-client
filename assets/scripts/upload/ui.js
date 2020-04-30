@@ -10,15 +10,16 @@ const createForm = function () {
   $('.gallery').html(uploadImageTemplate).show()
 }
 const updateForm = function (id) {
-  // console.log(store.uploads)
-  // console.log(id)
   const upload = store.uploads.find(x => x._id === id)
-  // console.log(upload)
+
   const updateFormHtml = updateFormTemplate({ upload })
   $(`#${id}`).html(updateFormHtml)
 }
 
 const indexUploadSuccess = (data) => {
+  // update data.uploads to add isOwner property
+  data.uploads.forEach(upload => { upload.isOwner = store.user._id === upload.owner })
+  // pass the template multiple uploads and current user
   const indexImageHtml = indexImageTemplate({ uploads: data.uploads })
   store.uploads = data.uploads
   $('.gallery').html(indexImageHtml).show()
