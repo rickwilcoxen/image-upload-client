@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HipBox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+<!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">HipBox</a>
+  <!-- Nav buttons -->
+  <ul class="nav navbar-nav navbar-right ml-auto logout-pass">
+    <button class="btn btn-primary" id="navsign-in" type="button">Sign in</button>
+    <button class="btn btn-primary" id="navsign-up" type="button">Sign up</button>
+    <button class="btn btn-primary" id="navUpload" type="button">Upload Image</button>
+    <button class="btn btn-primary" id="navViewAll" type="button">View All</button>
+
+  <!-- Dropdown menu for settings -->
+  <li class="nav-item settings" i45>
+    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#" >Settings</a>
+    <ul class="dropdown-menu form-wrapper">
+      <li>
+        <!-- Change password -->
+      <form id="change-Pw" method="post">
+          <div class="form-group">
+            <input type="password" class="form-control" name="passwords[old]" placeholder="Actual Password" required="required">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="passwords[new]" placeholder="New Password" required="required">
+          </div>
+          <input type="submit" class="btn btn-primary btn-block" value="Change Password">
+        </form>
+      </li>
+      <p class="divider-text">
+      </p>
+      <!-- Sign out button -->
+      <li>
+        <form id="sign-out" class="form-inline my-2 my-lg-0">
+          <input class="btn btn-primary btn-block" type="submit" value="Log Out">
+        </form>
+      </li>
+    </ul>
+  </li>
+</ul>
+</nav>
+
+  <!-- Auth Messages -->
+  <section>
+  <h4 id='Messages' class='messageBoard'></h4>
+  </section>
+  <!-- Auth section that contains all the auth form fields -->
+  <section class="Auth">
+    <div class="container">
+      <br>
+      <div class="card bg-light">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+
+          <form class="sign-in">
+            <p class="divider-text">
+              <span class="bg-light">Sign In</span>
+            </p>
+         <!-- Sign in Email form-group -->
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+              </div>
+              <input name="credentials[email]" class="form-control" placeholder="Email address" type="email" required="required">
+            </div>
+          <!-- Sign in Password credentials form-group -->
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+              </div>
+              <input name="credentials[password]" class="form-control" placeholder="Create password" type="password" required="required">
+            </div>
+            <!-- Sign in Button form-group -->
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block btn-signIn"> Log In </button>
+            </div>
+            <!-- form-group -->
+          </form>
+
+          <!-- Sign up form group -->
+          <form class="sign-up">
+            <p class="divider-text">
+              <span class="bg-light">Sign Up</span>
+            </p>
+         <!-- Sign up Email Credentials form-group -->
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+              </div>
+              <input name="credentials[email]" class="form-control" placeholder="Email address" type="email" required="required">
+            </div>
+          <!-- Sign up Password Credentials form-group -->
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+              </div>
+              <input name="credentials[password]" class="form-control" placeholder="Create password" type="password" required="required">
+            </div>
+            <!-- Sign up password confirm credeentials form-group -->
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+              </div>
+              <input name="credentials[password_confirmation]" class="form-control" placeholder="Repeat password" type="password" required="required">
+            </div>
+            <!-- Sign up submit form-group -->
+            <!-- is btn-signUn supposed to be btn-signUp ? -->
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block btn-signUn"> Create Account </button>
+            </div>
+            <!-- form-group -->
+          </form>
+
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- View all form group -->
+  <section class="gallery container">
+  </section>
+
+
+</body>
+
+</html>
