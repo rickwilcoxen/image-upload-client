@@ -22,4 +22,4 @@ $(() => {
   $('.gallery').on('click', '.update-btn', uploadEvents.onUpdateForm)
   $('.gallery').on('submit', '.update-form', uploadEvents.onUpdateUpload)
   $('.gallery').on('click', '.delete-btn', uploadEvents.onDeleteUpload)
-}
+})
