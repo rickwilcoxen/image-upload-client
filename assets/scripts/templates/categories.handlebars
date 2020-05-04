@@ -1,0 +1,14 @@
+<div class="viewAllInterests-All">
+{{#each categories as |category|}}
+  <div id="{{category._id}}" class="col mb-4">
+    <p class="categorytitle">Text: {{category.text}}</p>
+    <p>Owner: {{category.owner}}</p>
+    {{#if category.isOwner}}
+    <div class="cat-buttons row">
+    <button data-id="{{category._id}}" class="btn btn-warning update-btn" type="button" value="Update" id="interestUpdate">Update</button>
+    <button data-id="{{category._id}}" class="btn btn-danger delete-btn" type="button" value="Delete">Delete</button>
+    </div>
+    {{/if}}
+  </div>
+{{/each}}
+</div>

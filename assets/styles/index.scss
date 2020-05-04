@@ -49,6 +49,7 @@ $success: #0F9D58;
 .Auth,
 .settings,
 .interests,
+.viewAllInterests,
 #navViewCats,
 #navUpload,
 #navViewAll {
@@ -59,12 +60,12 @@ $success: #0F9D58;
   margin-right: auto;
   width: 40%;
 }
-.gallery .card {
+.gallery .card .viewAllInterests{
   margin-left: auto;
   margin-right: auto;
   width: 40%;
 }
-.gallery .uploads-gallery {
+.gallery .uploads-gallery .viewAllInterests-gallery .viewAllInterests{
 
 }
 

@@ -9,6 +9,7 @@ const updateFormTemplate = require('../templates/update-form.handlebars')
 const createForm = function () {
   $('.gallery').html(uploadImageTemplate).show()
   $('.interests').hide()
+  $('.viewAllInterests').hide()
 }
 const updateForm = function (id) {
   const upload = store.uploads.find(x => x._id === id)
@@ -26,6 +27,7 @@ const indexUploadSuccess = (data) => {
   $('.gallery').html(indexImageHtml).show()
   $('.Auth').hide()
   $('.interests').hide()
+  $('.viewAllInterests').hide()
   $('#Messages').text('Index Succesfully').removeClass('failure').addClass('success')
 }
 

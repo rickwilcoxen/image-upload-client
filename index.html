@@ -140,20 +140,18 @@
 
   <!-- View Interests form group -->
   <section class="interests container">
-    <div class="form-group">
-      <p> Add a new interest! </p>
-      <input name="new-interest" class="form-control" placeholder="Enter new interest" type="text" required="required">
-      <button type="submit" class="btn btn-primary btn-block">Add Interests</button>
-    </div>
-    <div class="form-group">
-    <button class="btn btn-primary btn-block">View My Interests</button>
-    <section class="viewAllInterests container">
-    </section>
-
-    </div>
+  <form id="newInterestBtn" class="form-group">
+      <h3> Add a new interest! This can be anything from your favorite books, movies, hobbies, and more!</h3>
+      <input name="newInterest" class="form-control" placeholder="Enter new interest" type="text" required="required">
+      <input type="submit" class="btn btn-primary btn-block" value="add interest">
+    </form>
+    <h3>Interests</h3>
+    <button id="SeeAllInterests" class="btn btn-primary btn-block" value="See All Interests"> See all </button>
 
   </section>
-
+  <!-- View all the interests -->
+  <section class="viewAllInterests container">
+  </section>
 </body>
 
 </html>

@@ -22,4 +22,13 @@ $(() => {
   $('.gallery').on('click', '.update-btn', uploadEvents.onUpdateForm)
   $('.gallery').on('submit', '.update-form', uploadEvents.onUpdateUpload)
   $('.gallery').on('click', '.delete-btn', uploadEvents.onDeleteUpload)
+
+  // view categories resource interactions
+  $('#SeeAllInterests').on('click', catEvents.onViewAllCats)
+  $('#newInterestBtn').on('submit', catEvents.onCreateCats)
+
+  // u-d resource interactions
+  $('.viewAllInterests').on('click', '.update-btn', catEvents.onUpdateForm)
+  $('.viewAllInterests').on('submit', '.update-form', catEvents.onUpdateCategory)
+  $('.viewAllInterests').on('click', '.delete-btn', catEvents.onDeleteCategory)
 })
